@@ -1,0 +1,560 @@
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -4px);
+  }
+}
+#wrap {
+  width: 100%;
+}
+#wrap > .status {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+#wrap > .status > ul {
+  display: flex;
+  justify-content: space-between;
+}
+#wrap > .status > ul > li {
+  font-size: 15px;
+}
+#wrap > header {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  margin-top: 40px;
+  padding: 0 20px;
+  line-height: 70px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+#wrap > header.talk {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  height: 70px;
+}
+#wrap > header > div {
+  display: flex;
+}
+#wrap > header > div > h1 {
+  font-size: 26px;
+  font-weight: 500;
+}
+#wrap > header > div > h2 {
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 26px;
+}
+#wrap > header > div > h2 > a {
+  color: #ccc;
+}
+#wrap > header > h1 {
+  font-size: 26px;
+  font-weight: 500;
+}
+#wrap > header > .settings, #wrap > header .talk {
+  font-size: 20px;
+}
+#wrap > header > .settings > a:hover, #wrap > header .talk > a:hover {
+  color: #f5e8a5;
+}
+#wrap > header > nav > .navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 130px;
+  font-size: 24px;
+}
+#wrap > header > nav > .navigation > li {
+  margin-left: 20px;
+}
+#wrap > header > nav > .navigation > li:last-child:hover > a {
+  color: #f00;
+}
+#wrap > header > nav.settings > .navigation > li:hover > a {
+  color: #000;
+}
+#wrap > header > nav.talk > .navigation {
+  font-size: 20px;
+}
+#wrap > header > nav.talk > .navigation > li:hover > a {
+  color: #000;
+}
+#wrap > section {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#wrap > .oversize {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+@media screen and (min-width: 550px) {
+  #wrap > .oversize {
+    display: block;
+    background-color: #f478ff;
+  }
+}
+#wrap > .oversize > h2 {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (min-width: 550px) {
+  #wrap > .oversize > h2 {
+    display: block;
+  }
+}
+#wrap > section.chat-list, #wrap .friends, #wrap .favorite {
+  padding-bottom: 60px;
+}
+#wrap > section.chat-list > div.chat-list, #wrap .friends > div.chat-list, #wrap .favorite > div.chat-list {
+  margin-bottom: 25px;
+}
+#wrap > section.chat-list > div.chat-list > a, #wrap .friends > div.chat-list > a, #wrap .favorite > div.chat-list > a {
+  position: relative;
+  display: block;
+  height: 60px;
+}
+#wrap > section.chat-list > div.chat-list > a:hover, #wrap .friends > div.chat-list > a:hover, #wrap .favorite > div.chat-list > a:hover {
+  background-color: #f5e8a5;
+}
+#wrap > section.chat-list > div.chat-list > a > h3, #wrap .friends > div.chat-list > a > h3, #wrap .favorite > div.chat-list > a > h3 {
+  position: absolute;
+  left: 70px;
+  top: 15%;
+  font-size: 18px;
+  font-weight: 500;
+}
+#wrap > section.chat-list > div.chat-list > a > p.overview, #wrap .friends > div.chat-list > a > p.overview, #wrap .favorite > div.chat-list > a > p.overview {
+  position: absolute;
+  left: 70px;
+  top: 67%;
+  color: #888;
+  font-size: 15px;
+}
+#wrap > section.chat-list > div.chat-list > a > img, #wrap .friends > div.chat-list > a > img, #wrap .favorite > div.chat-list > a > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+}
+#wrap > section.chat-list > div.chat-list > a p, #wrap .friends > div.chat-list > a p, #wrap .favorite > div.chat-list > a p {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #888;
+}
+#wrap > section.chat-list > div.chat2 > a > .group-chat, #wrap .friends > div.chat2 > a > .group-chat, #wrap .favorite > div.chat2 > a > .group-chat {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+#wrap > section.chat-list > div.chat2 > a > .group-chat > img, #wrap .friends > div.chat2 > a > .group-chat > img, #wrap .favorite > div.chat2 > a > .group-chat > img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 30%;
+}
+#wrap > section.chat-list > div.chat2 > a > .group-chat > img:last-child, #wrap .friends > div.chat2 > a > .group-chat > img:last-child, #wrap .favorite > div.chat2 > a > .group-chat > img:last-child {
+  right: 0;
+  bottom: 0;
+  box-shadow: -3px -3px white;
+}
+#wrap > section.chat-list > div.chat2 > a:hover img:last-child, #wrap .friends > div.chat2 > a:hover img:last-child, #wrap .favorite > div.chat2 > a:hover img:last-child {
+  box-shadow: -3px -3px #f5e8a5;
+}
+#wrap > section.chat-list > div.chat3 > a > p:nth-of-type(2), #wrap .friends > div.chat3 > a > p:nth-of-type(2), #wrap .favorite > div.chat3 > a > p:nth-of-type(2) {
+  top: 40%;
+}
+#wrap > section.chat-list > div.chat3 > a > p:nth-of-type(3), #wrap .friends > div.chat3 > a > p:nth-of-type(3), #wrap .favorite > div.chat3 > a > p:nth-of-type(3) {
+  top: 80%;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 50%;
+}
+#wrap > section.chat-list > div.chat5 > a > .group-chat, #wrap .friends > div.chat5 > a > .group-chat, #wrap .favorite > div.chat5 > a > .group-chat {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 60px;
+  height: 60px;
+}
+#wrap > section.chat-list > div.chat5 > a > .group-chat > img, #wrap .friends > div.chat5 > a > .group-chat > img, #wrap .favorite > div.chat5 > a > .group-chat > img {
+  width: 28px;
+  height: 28px;
+  border-radius: 30%;
+}
+#wrap > section.friends > div.me, #wrap section.more > div.me {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  height: 80px;
+}
+#wrap > section.friends > div.me > h3, #wrap section.more > div.me > h3 {
+  position: absolute;
+  left: 100px;
+  top: 20%;
+  font-weight: 500;
+  font-size: 20px;
+}
+#wrap > section.friends > div.me > p, #wrap section.more > div.me > p {
+  position: absolute;
+  left: 100px;
+  bottom: 35%;
+  color: #000;
+  font-size: 14px;
+}
+#wrap > section.friends > div.me > img, #wrap section.more > div.me > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+}
+#wrap > section.friends > div.birth, #wrap > section.friends .add, #wrap section.more > div.birth, #wrap section.more .add {
+  position: relative;
+  height: 120px;
+  border-bottom: 1px solid #eee;
+}
+#wrap > section.friends > div.birth > h3, #wrap > section.friends .add > h3, #wrap section.more > div.birth > h3, #wrap section.more .add > h3 {
+  position: absolute;
+  top: 25px;
+  font-size: 13px;
+  font-weight: 400;
+}
+#wrap > section.friends > div.birth > p, #wrap > section.friends .add > p, #wrap section.more > div.birth > p, #wrap section.more .add > p {
+  position: absolute;
+  left: 80px;
+  bottom: 30%;
+  font-weight: 500;
+  font-size: 15px;
+}
+#wrap > section.friends > div.birth > img, #wrap > section.friends .add > img, #wrap section.more > div.birth > img, #wrap section.more .add > img {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+}
+#wrap > section.friends > .favorite > h3:nth-child(1), #wrap section.more > .favorite > h3:nth-child(1) {
+  margin: 25px 0 10px;
+  font-size: 13px;
+  font-weight: 400;
+}
+#wrap > section.add-friends > div.add {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+#wrap > section.add-friends > div.add > ul {
+  display: flex;
+  justify-content: space-around;
+}
+#wrap > section.add-friends > div.add > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80px;
+}
+#wrap > section.add-friends > div.add > ul > li > a > i {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+#wrap > section.add-friends > .recommend > h2 {
+  height: 80px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 80px;
+}
+#wrap > section.add-friends > .recommend > .recommend-list > a {
+  position: relative;
+  display: block;
+  height: 80px;
+}
+#wrap > section.add-friends > .recommend > .recommend-list > a:hover {
+  background-color: #f5e8a5;
+}
+#wrap > section.add-friends > .recommend > .recommend-list > a > h3 {
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-weight: 500;
+  font-size: 18px;
+}
+#wrap > section.add-friends > .recommend > .recommend-list > a > img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+#wrap > section.add-friends > .recommend > .recommend-list > a > i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 20px;
+}
+#wrap > section.more > div.me {
+  margin-bottom: 10px;
+  border-bottom: none;
+}
+#wrap > section.more > .add, #wrap > section.more .kakao-service {
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+#wrap > section.more > .add > ul, #wrap > section.more .kakao-service > ul {
+  display: flex;
+  justify-content: space-around;
+}
+#wrap > section.more > .add > ul > li > a, #wrap > section.more .kakao-service > ul > li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+#wrap > section.more > .add > ul > li > a > i, #wrap > section.more .kakao-service > ul > li > a > i {
+  font-size: 36px;
+}
+#wrap > section.more > .kakao-service > h2 {
+  height: 60px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 60px;
+}
+#wrap > section.more > .kakao-service > ul > li > a {
+  height: 90px;
+}
+#wrap > section.more > .kakao-service > ul > li > a > span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #fadd02;
+  border-radius: 20%;
+  box-sizing: border-box;
+}
+#wrap > section.more > .kakao-service > ul > li > a > span > i {
+  color: #fff;
+  font-size: 36px;
+}
+#wrap > .settings > .setting-list > h3 {
+  position: relative;
+}
+#wrap > .settings > .setting-list > h3:hover > a {
+  background-color: #f5e8a5;
+}
+#wrap > .settings > .setting-list > h3 > a {
+  display: block;
+  height: 65px;
+  padding-left: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 65px;
+  box-sizing: border-box;
+}
+#wrap > .settings > .setting-list > h3 > a > i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#wrap > section.talk {
+  position: relative;
+  width: 100%;
+  margin-top: 110px;
+}
+#wrap > section.talk > .background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  background-image: url(../images/background.jpeg);
+  opacity: 0.5;
+}
+#wrap > section.talk > h2 + p {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 20px;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 1px 3px 3px 3px rgba(170, 170, 170, 0.3);
+}
+#wrap > section.talk > .talk-left {
+  position: absolute;
+  width: 50%;
+  height: 70px;
+}
+#wrap > section.talk > .talk-left:nth-of-type(2) {
+  top: 60px;
+}
+#wrap > section.talk > .talk-left:nth-of-type(4) {
+  top: 210px;
+}
+#wrap > section.talk > .talk-left:nth-of-type(6) {
+  top: 320px;
+}
+#wrap > section.talk > .talk-left > h3 {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  font-weight: 400;
+  font-size: 12px;
+}
+#wrap > section.talk > .talk-left > p {
+  position: absolute;
+  left: 50px;
+  top: 15px;
+  margin-top: 5px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 3px 3px 3px rgba(170, 170, 170, 0.3);
+}
+#wrap > section.talk > .talk-left > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#wrap > section.talk > .talk-right {
+  position: absolute;
+  width: 50%;
+}
+#wrap > section.talk > .talk-right:nth-of-type(3) {
+  right: 0;
+  top: 120px;
+}
+#wrap > section.talk > .talk-right:nth-of-type(5) {
+  right: 0;
+  top: 230px;
+}
+#wrap > section.talk > .talk-right > p {
+  position: absolute;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #f9e73d;
+  border-radius: 10px;
+  box-shadow: 1px 3px 3px 3px rgba(170, 170, 170, 0.3);
+}
+#wrap > section.talk > .talk-right > p:last-child {
+  top: 45px;
+}
+#wrap > footer > nav {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 65px;
+  background-color: #fff;
+  border-top: 1px solid #aaa;
+}
+#wrap > footer > nav > .gnb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 65px;
+}
+#wrap > footer > nav > .gnb > li:hover > a {
+  color: #fa88b4;
+}
+#wrap > footer > nav > .gnb > li > a {
+  display: block;
+  font-size: 25px;
+}
+#wrap > footer > nav > .gnb > li:nth-child(2) {
+  position: relative;
+}
+#wrap > footer > nav > .gnb > li:nth-child(2) > p {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+  background-color: #f00;
+  border-radius: 50%;
+  animation: bounce 0.5s infinite alternate;
+}
+#wrap > footer.talk {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #ccc;
+}
+#wrap > footer.talk > .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ccc;
+}
+#wrap > footer.talk > .input > input {
+  width: 75%;
+  height: 55px;
+  margin-right: 10px;
+  font-size: 16px;
+  text-indent: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+#wrap > footer.talk > .input > i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+#wrap > footer.talk:hover {
+  position: absolute;
+}/*# sourceMappingURL=style.css.map */
