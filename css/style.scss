@@ -149,32 +149,33 @@ $hover-color : #f5e8a5;
 	> section.chat-list, .friends, .favorite {
 			padding-bottom: 60px;
 		> div.chat-list {
-			margin-bottom: 25px;
+			margin-bottom: 10px;
 			> a {
 				position: relative;
 				display: block;
 				height: 60px;
+                padding: 5px;
 				&:hover {
 					background-color: $hover-color;
 				}
 				> h3 {
 					position: absolute;
-					left: 70px;
-					top: 15%;
+					left: 80px;
+					top: 20px;
 					font-size: 18px;
 					font-weight: 500;
 				}
 				> p.overview {
 					position: absolute;
-					left: 70px;
-					top: 67%;
+					left: 80px;
+					top: 50px;
 					color: #888;
 					font-size: 15px;
 				}
 				> img {
 					position: absolute;
-					left: 0;
-					top: 0;
+					left: 5px;
+					top: 5px;
 					display: block;
 					width: 60px;
 					height: 60px;
@@ -182,7 +183,7 @@ $hover-color : #f5e8a5;
 					}
 				p {
 					position: absolute;
-					right: 0;
+					right: 5px;
 					@include transTop;
 					color: #888;
 				}
@@ -252,32 +253,33 @@ $hover-color : #f5e8a5;
 	>section.friends, section.more{
 		>div.me{
 				position: relative;
+                height: 80px;
 				padding-bottom: 10px;
 				border-bottom: 1px solid #eee;
-				height: 80px;
+                
+                >h3{
+                    position: absolute;
+                    left: 100px;
+                    top: 20%;
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+                >p{
+                    position: absolute;
+                    left: 100px;
+                    bottom: 35%;
+                    color: #000;
+                    font-size: 14px;
+                }
+                >img{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 30%;
+                }
 
-				>h3{
-					position: absolute;
-					left: 100px;
-					top: 20%;
-					font-weight: 500;
-					font-size: 20px;
-				}
-				>p{
-					position: absolute;
-					left: 100px;
-					bottom: 35%;
-					color: #000;
-					font-size: 14px;
-				}
-				>img{
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 80px;
-					height: 80px;
-					border-radius: 30%;
-				}
 		}//end of .me
 		>div.birth, .add{
 				position: relative;
@@ -451,7 +453,7 @@ $hover-color : #f5e8a5;
 					box-sizing: border-box;
 					>i{
 						position: absolute;
-						left: 0;
+						left: 5px;
 						@include transTop;
 					}
 				}//end of a
@@ -647,14 +649,16 @@ $hover-color : #f5e8a5;
         >.ad{
             position: relative;
             top: 100px;
-            width: 400px;
+            width: 350px;
             padding: 10px;
             background-color: #fff;
+            border-radius: 20px;
             box-sizing: border-box;
+            box-shadow:1px 3px 3px 3px rgba($color: #aaa, $alpha: 0.3);
             >h3{
                 position: absolute;
                 left: 0;
-                top: -20px;
+                top: -25px;
                 font-weight: 400;
                 font-size: 13px;
             }
@@ -666,7 +670,7 @@ $hover-color : #f5e8a5;
 
                 &:last-child{
                     height: 40px;
-                    margin-top: 10px;
+                    margin: 10px 0;
                     font-size: 15px;
                     font-weight: 400;
                     line-height: 40px;
@@ -677,9 +681,9 @@ $hover-color : #f5e8a5;
                 }
             }
             >p+p{
-                height: 180px;
+                height: 150px;
                 >img{
-                    width: 380px;
+                    width: 330px;
                 }
             }
             >ul{
@@ -707,6 +711,7 @@ $hover-color : #f5e8a5;
             }//end of ul
         }//end of .ad
     }//end of .talk-ad
+
 	>footer{
         @keyframes popup {
             0%{bottom: -65px;}

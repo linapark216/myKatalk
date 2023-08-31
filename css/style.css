@@ -130,34 +130,35 @@
   padding-bottom: 60px;
 }
 #wrap > section.chat-list > div.chat-list, #wrap .friends > div.chat-list, #wrap .favorite > div.chat-list {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 #wrap > section.chat-list > div.chat-list > a, #wrap .friends > div.chat-list > a, #wrap .favorite > div.chat-list > a {
   position: relative;
   display: block;
   height: 60px;
+  padding: 5px;
 }
 #wrap > section.chat-list > div.chat-list > a:hover, #wrap .friends > div.chat-list > a:hover, #wrap .favorite > div.chat-list > a:hover {
   background-color: #f5e8a5;
 }
 #wrap > section.chat-list > div.chat-list > a > h3, #wrap .friends > div.chat-list > a > h3, #wrap .favorite > div.chat-list > a > h3 {
   position: absolute;
-  left: 70px;
-  top: 15%;
+  left: 80px;
+  top: 20px;
   font-size: 18px;
   font-weight: 500;
 }
 #wrap > section.chat-list > div.chat-list > a > p.overview, #wrap .friends > div.chat-list > a > p.overview, #wrap .favorite > div.chat-list > a > p.overview {
   position: absolute;
-  left: 70px;
-  top: 67%;
+  left: 80px;
+  top: 50px;
   color: #888;
   font-size: 15px;
 }
 #wrap > section.chat-list > div.chat-list > a > img, #wrap .friends > div.chat-list > a > img, #wrap .favorite > div.chat-list > a > img {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 5px;
+  top: 5px;
   display: block;
   width: 60px;
   height: 60px;
@@ -165,7 +166,7 @@
 }
 #wrap > section.chat-list > div.chat-list > a p, #wrap .friends > div.chat-list > a p, #wrap .favorite > div.chat-list > a p {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 50%;
   transform: translate(0, -50%);
   color: #888;
@@ -218,9 +219,9 @@
 }
 #wrap > section.friends > div.me, #wrap section.more > div.me {
   position: relative;
+  height: 80px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
-  height: 80px;
 }
 #wrap > section.friends > div.me > h3, #wrap section.more > div.me > h3 {
   position: absolute;
@@ -393,7 +394,7 @@
 }
 #wrap > .settings > .setting-list > h3 > a > i {
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 50%;
   transform: translate(0, -50%);
 }
@@ -574,15 +575,17 @@
 #wrap > section.talk-ad > .ad {
   position: relative;
   top: 100px;
-  width: 400px;
+  width: 350px;
   padding: 10px;
   background-color: #fff;
+  border-radius: 20px;
   box-sizing: border-box;
+  box-shadow: 1px 3px 3px 3px rgba(170, 170, 170, 0.3);
 }
 #wrap > section.talk-ad > .ad > h3 {
   position: absolute;
   left: 0;
-  top: -20px;
+  top: -25px;
   font-weight: 400;
   font-size: 13px;
 }
@@ -594,7 +597,7 @@
 }
 #wrap > section.talk-ad > .ad > p:last-child {
   height: 40px;
-  margin-top: 10px;
+  margin: 10px 0;
   font-size: 15px;
   font-weight: 400;
   line-height: 40px;
@@ -604,10 +607,10 @@
   box-sizing: border-box;
 }
 #wrap > section.talk-ad > .ad > p + p {
-  height: 180px;
+  height: 150px;
 }
 #wrap > section.talk-ad > .ad > p + p > img {
-  width: 380px;
+  width: 330px;
 }
 #wrap > section.talk-ad > .ad > ul > li {
   border-bottom: 1px solid #dedede;
