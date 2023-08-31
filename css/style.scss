@@ -230,7 +230,7 @@ $hover-color : #f5e8a5;
 					}
 				}	
 		}//end of chat3
-		>div.chat5{
+		>div.chat4{
 			>a{
 				>.group-chat{
 					display: flex;
@@ -461,6 +461,7 @@ $hover-color : #f5e8a5;
 		position: relative;
 		width: 100%;
 		margin-top: 110px;
+        padding-bottom: 100px;
 		>.background{
 			position: fixed;
 			left: 0;
@@ -486,8 +487,7 @@ $hover-color : #f5e8a5;
 		}//end of p
 		>.talk-left{
 			position: absolute;
-			width: 50%;
-			height: 70px;
+			width: 60%;
 
 			&:nth-of-type(2){
 				top: 60px;
@@ -526,7 +526,7 @@ $hover-color : #f5e8a5;
 		}//end of talk-left
 		>.talk-right{
 			position: absolute;
-			width: 50%;
+            width: 60%;
 			&:nth-of-type(3){
 				right: 0;
 				top: 120px;
@@ -551,15 +551,109 @@ $hover-color : #f5e8a5;
 		}//end of talk=right
 
 	}
+    >section.talk2{
+        height: 1000px;
+        >.talk-left{
+            &:nth-of-type(2){
+                >p+p{
+                    top: 65px;
+                }
+            }
+            &:nth-of-type(4){
+                top: 450px;
+            }
+            &:nth-of-type(5){
+                top: 530px;
+                >p{
+                    padding: 10px;
+                    >img{
+                        width: 250px;
+                    }
+                }
+                >p+p{
+                    top: 65px;
+                }
+            }
+        }//end of talk-left
+        >.talk-right{
+            &:nth-of-type(3){
+                top: 150px;
+                >p{
+                    padding: 10px;
+                    >img{
+                        width: 200px;
+                    }
+                }
+            }
+        }//end of .talk-right
+    }//end of .talk2
+    >section.talk3{
+        >.talk-left{
+            >p{
+                &:nth-child(3){top: 65px;}
+                &:nth-child(4){top: 115px;}
+            }
+        }
+    }//end of .talk3
+    >section.talk4{
+        height: 1300px;
+        >.talk-left{
+            &:nth-of-type(2){
+                >p{
+                    &:nth-child(2){
+                        overflow: hidden;
+                    width: 230px;
+                    height: 290px;
+                    padding-top: 260px;
+                    background-image: url(../images/로꼬.png);
+                    background-position: top center;
+                    background-size: 250px;
+                    background-repeat: no-repeat;
+                    box-sizing: border-box;
+                    }
+                    &:nth-child(3){top: 320px;}
+                    &:nth-child(4){top: 370px;}
+                }
+            }//end of nth-of-type(2) 
+            &:nth-of-type(3){
+                top: 500px;
+                >p{
+                    &:nth-child(3){top: 65px;}
+                }
+            }
+            &:nth-of-type(5){
+                top: 730px;
+                >p{
+                    &:nth-child(3){top: 85px;}
+                    &:nth-child(4){top: 140px;}
+                    &:nth-child(5){top: 195px;}
+                }
+            }
+        }//end of .talk-left
+        >.talk-right{
+            &:nth-of-type(4){
+                top: 620px;
+                right: 0;
+                >p{
+                    &:nth-child(2){top: 55px;}
+                }
+            }
+        }//end of talk-right
+    }//end of .talk4
 	>footer{
+        @keyframes popup {
+            0%{bottom: -65px;}
+            100%{bottom: 0;}
+        }
 		> nav {
-			position: fixed;
-			bottom: 0;
+            position: fixed;
+			bottom: -65px;
 			z-index: 1000;
 			width: 100%;
 			height: 65px;
 			background-color: #fff;
 			border-top: 1px solid #aaa;
+            animation: popup 0.5s linear 0.5s forwards;
 
 			> .gnb {
 				display: flex;
@@ -590,13 +684,13 @@ $hover-color : #f5e8a5;
 							text-align: center;
 							background-color: #f00;
 							border-radius: 50%;
-							animation: bounce 0.5s infinite alternate;
-						}
+							animation: bounce 0.5s ease-in-out infinite alternate;
+						}//end of p
 					}
-				}
+				}//end of li
 			} //end of .gnb
 		} //end of nav
-	}
+	}//end of footer
 	>footer.talk{
 		position: fixed;
 		left: 0;
@@ -604,6 +698,7 @@ $hover-color : #f5e8a5;
 		width: 100%;
 		height: 70px;
 		background-color: #ccc;
+        transition: all 0.7s;
 		>.input{
 			display: flex;
 			justify-content: center;
@@ -618,15 +713,29 @@ $hover-color : #f5e8a5;
 				font-size: 16px;
 				text-indent: 10px;
 				border: none;
+                outline: none;
 				box-sizing: border-box;
 			}
 			>i{
 				margin-right: 10px;
 				font-size: 20px;
 			}
-		}
-		&:hover{
-			position: absolute;
-		}
+		}//end of .input
+        >.keyboard{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            >img{
+                width: 100%;
+                height: 250px;
+            }
+        }
+        &:hover{
+            bottom: 235px;
+            >.keyboard{
+                top: 55px;
+            }
+        }
 	}
 }

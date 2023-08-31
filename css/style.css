@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes bounce {
   0% {
     transform: translate(0, 0);
@@ -202,7 +203,7 @@
   background-color: #f00;
   border-radius: 50%;
 }
-#wrap > section.chat-list > div.chat5 > a > .group-chat, #wrap .friends > div.chat5 > a > .group-chat, #wrap .favorite > div.chat5 > a > .group-chat {
+#wrap > section.chat-list > div.chat4 > a > .group-chat, #wrap .friends > div.chat4 > a > .group-chat, #wrap .favorite > div.chat4 > a > .group-chat {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -210,7 +211,7 @@
   width: 60px;
   height: 60px;
 }
-#wrap > section.chat-list > div.chat5 > a > .group-chat > img, #wrap .friends > div.chat5 > a > .group-chat > img, #wrap .favorite > div.chat5 > a > .group-chat > img {
+#wrap > section.chat-list > div.chat4 > a > .group-chat > img, #wrap .friends > div.chat4 > a > .group-chat > img, #wrap .favorite > div.chat4 > a > .group-chat > img {
   width: 28px;
   height: 28px;
   border-radius: 30%;
@@ -400,6 +401,7 @@
   position: relative;
   width: 100%;
   margin-top: 110px;
+  padding-bottom: 100px;
 }
 #wrap > section.talk > .background {
   position: fixed;
@@ -426,8 +428,7 @@
 }
 #wrap > section.talk > .talk-left {
   position: absolute;
-  width: 50%;
-  height: 70px;
+  width: 60%;
 }
 #wrap > section.talk > .talk-left:nth-of-type(2) {
   top: 60px;
@@ -465,7 +466,7 @@
 }
 #wrap > section.talk > .talk-right {
   position: absolute;
-  width: 50%;
+  width: 60%;
 }
 #wrap > section.talk > .talk-right:nth-of-type(3) {
   right: 0;
@@ -486,14 +487,104 @@
 #wrap > section.talk > .talk-right > p:last-child {
   top: 45px;
 }
+#wrap > section.talk2 {
+  height: 1000px;
+}
+#wrap > section.talk2 > .talk-left:nth-of-type(2) > p + p {
+  top: 65px;
+}
+#wrap > section.talk2 > .talk-left:nth-of-type(4) {
+  top: 450px;
+}
+#wrap > section.talk2 > .talk-left:nth-of-type(5) {
+  top: 530px;
+}
+#wrap > section.talk2 > .talk-left:nth-of-type(5) > p {
+  padding: 10px;
+}
+#wrap > section.talk2 > .talk-left:nth-of-type(5) > p > img {
+  width: 250px;
+}
+#wrap > section.talk2 > .talk-left:nth-of-type(5) > p + p {
+  top: 65px;
+}
+#wrap > section.talk2 > .talk-right:nth-of-type(3) {
+  top: 150px;
+}
+#wrap > section.talk2 > .talk-right:nth-of-type(3) > p {
+  padding: 10px;
+}
+#wrap > section.talk2 > .talk-right:nth-of-type(3) > p > img {
+  width: 200px;
+}
+#wrap > section.talk3 > .talk-left > p:nth-child(3) {
+  top: 65px;
+}
+#wrap > section.talk3 > .talk-left > p:nth-child(4) {
+  top: 115px;
+}
+#wrap > section.talk4 {
+  height: 1300px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(2) > p:nth-child(2) {
+  overflow: hidden;
+  width: 230px;
+  height: 290px;
+  padding-top: 260px;
+  background-image: url(../images/로꼬.png);
+  background-position: top center;
+  background-size: 250px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(2) > p:nth-child(3) {
+  top: 320px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(2) > p:nth-child(4) {
+  top: 370px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(3) {
+  top: 500px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(3) > p:nth-child(3) {
+  top: 65px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(5) {
+  top: 730px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(5) > p:nth-child(3) {
+  top: 85px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(5) > p:nth-child(4) {
+  top: 140px;
+}
+#wrap > section.talk4 > .talk-left:nth-of-type(5) > p:nth-child(5) {
+  top: 195px;
+}
+#wrap > section.talk4 > .talk-right:nth-of-type(4) {
+  top: 620px;
+  right: 0;
+}
+#wrap > section.talk4 > .talk-right:nth-of-type(4) > p:nth-child(2) {
+  top: 55px;
+}
+@keyframes popup {
+  0% {
+    bottom: -65px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
 #wrap > footer > nav {
   position: fixed;
-  bottom: 0;
+  bottom: -65px;
   z-index: 1000;
   width: 100%;
   height: 65px;
   background-color: #fff;
   border-top: 1px solid #aaa;
+  animation: popup 0.5s linear 0.5s forwards;
 }
 #wrap > footer > nav > .gnb {
   display: flex;
@@ -524,7 +615,7 @@
   text-align: center;
   background-color: #f00;
   border-radius: 50%;
-  animation: bounce 0.5s infinite alternate;
+  animation: bounce 0.5s ease-in-out infinite alternate;
 }
 #wrap > footer.talk {
   position: fixed;
@@ -533,6 +624,7 @@
   width: 100%;
   height: 70px;
   background-color: #ccc;
+  transition: all 0.7s;
 }
 #wrap > footer.talk > .input {
   display: flex;
@@ -549,12 +641,26 @@
   font-size: 16px;
   text-indent: 10px;
   border: none;
+  outline: none;
   box-sizing: border-box;
 }
 #wrap > footer.talk > .input > i {
   margin-right: 10px;
   font-size: 20px;
 }
-#wrap > footer.talk:hover {
+#wrap > footer.talk > .keyboard {
   position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+}
+#wrap > footer.talk > .keyboard > img {
+  width: 100%;
+  height: 250px;
+}
+#wrap > footer.talk:hover {
+  bottom: 235px;
+}
+#wrap > footer.talk:hover > .keyboard {
+  top: 55px;
 }/*# sourceMappingURL=style.css.map */
